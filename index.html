@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaurav Goyal | Home</title>
+
+    <!-- Tailwind (CDN is fine for this assignment) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-slate-50 text-slate-900">
+    <!-- Page wrapper -->
+    <div class="min-h-screen">
+      <!-- Header (semantic) -->
+      <header class="border-b bg-white">
+        <nav class="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
+          <a href="#" class="font-semibold tracking-tight text-lg">Gaurav Goyal</a>
+          <div class="flex gap-4 text-sm">
+            <a class="hover:underline" href="#about">About</a>
+            <a class="hover:underline" href="#links">Links</a>
+            <a class="hover:underline" href="#contact">Contact</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main content (semantic) -->
+      <main class="mx-auto max-w-5xl px-4 py-10">
+        <!-- Hero / Intro -->
+        <section class="grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+              Hi, I’m <span class="text-sky-700">Gaurav</span>.
+            </h1>
+            <p class="mt-4 text-base md:text-lg text-slate-700">
+              I’m a Senior ML/AI Engineer who likes building practical systems, clean UIs, and useful tools.
+              This is my personal homepage for a static-site assignment.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#links"
+                class="inline-flex items-center rounded-lg bg-sky-700 px-4 py-2 text-white text-sm font-medium hover:bg-sky-800"
+              >
+                Explore links
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-slate-800 text-sm font-medium hover:bg-slate-100"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <!-- Image card -->
+          <figure class="card p-4 md:p-6">
+            <img
+              src="images/profile.jpg"
+              alt="A profile photo of Gaurav"
+              class="w-full h-64 md:h-80 object-cover rounded-xl"
+            />
+            <figcaption class="mt-3 text-sm text-slate-600">
+              Profile photo (add your own image in <code>images/profile.jpg</code>)
+            </figcaption>
+          </figure>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="mt-12">
+          <h2 class="section-title">About</h2>
+          <div class="card mt-4 p-5">
+            <p class="text-slate-700 leading-relaxed">
+              I enjoy turning messy problems into reliable products—especially where machine learning,
+              backend systems, and thoughtful design meet. Outside of work, I like learning new tech and
+              polishing small side projects.
+            </p>
+
+            <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-sm text-slate-700">
+              <li><span class="font-medium">Focus:</span> ML, AI, systems</li>
+              <li><span class="font-medium">Tools:</span> Python, JS, cloud</li>
+              <li><span class="font-medium">Likes:</span> clean UX, fast builds</li>
+              <li><span class="font-medium">Currently:</span> static web + deployment</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Links section -->
+        <section id="links" class="mt-12">
+          <h2 class="section-title">Links</h2>
+
+          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <a class="link-card" href="https://github.com/" target="_blank" rel="noreferrer">
+              <h3 class="font-semibold">GitHub</h3>
+              <p class="text-sm text-slate-600">Projects and code</p>
+            </a>
+
+            <a class="link-card" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <h3 class="font-semibold">LinkedIn</h3>
+              <p class="text-sm text-slate-600">Professional profile</p>
+            </a>
+
+            <a class="link-card" href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+              <h3 class="font-semibold">Tailwind CSS</h3>
+              <p class="text-sm text-slate-600">Utility-first styling</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="mt-12">
+          <h2 class="section-title">Contact</h2>
+          <div class="card mt-4 p-5">
+            <p class="text-slate-700">
+              Want to say hi? Email me:
+              <a class="text-sky-700 hover:underline" href="mailto:gauravgoyal03@icloud.com">
+                gauravgoyal03@icloud.com
+              </a>
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer (semantic) -->
+      <footer class="mt-12 border-t bg-white">
+        <div class="mx-auto max-w-5xl px-4 py-6 text-sm text-slate-600 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+          <p>© <span id="year"></span> Gaurav Goyal</p>
+          <p class="text-slate-500">Built with HTML + CSS + Tailwind</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+/* Basic readability defaults */
+:root {
+  --card-border: rgba(15, 23, 42, 0.12);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+}
+
+/* Reusable link “cards” */
+.link-card {
+  display: block;
+  padding: 1rem;
+  background: white;
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.10);
+}
